@@ -1,0 +1,1265 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	outline:  none;
+}
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	color: #333;
+	background:  #f7f7f7;
+	font-size: 1em;
+	font-family: "Segoe UI", sans-serif;
+	line-height: 135%;
+}
+
+a {
+	color: darkturquoise;
+	text-decoration: none;
+	transition: all.6s ease;
+}
+
+a:hover {
+	color: cornflowerblue;
+	text-decoration: none;
+	transition: all.6s ease;
+}
+
+a:active {
+	color: #8ce4a6;
+}
+
+hr {
+	display: block;
+	border: 0px;
+	height: 1px;
+	border-top: 1px solid #ccc;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+}
+
+.right {float: right;}
+.left {float: left;}
+.clear {clear: both;}
+
+/* Selection block */
+::selection {
+	background: #000000;
+	color: #fff;
+}
+
+/*Шапка*/
+@media (orientation: portrait) { /*Для портретного вида*/
+	header, footer {
+		width: 100%;
+		background-color: #fff;
+		float: left;
+	}
+	header {
+		height: 120px;
+		position: fixed;
+		border-bottom: 1px solid cornflowerblue;
+	}
+	header img {
+		width: 100px;
+		margin-top: 10px;
+		margin-right: 25px;
+		border-radius: 50%;
+		border: 3px solid silver;
+	}
+	header img:hover {
+		border: 3px solid cornflowerblue;
+	}
+	header #logo {
+		max-height: 100px;
+		font-size: 3em;
+		font-weight: bold;
+		margin-left: 25px;
+		margin-top: 41px;
+		float: left;
+	}
+}
+@media (orientation: landscape) { /* для альбомного вида */
+	header, footer {
+		user-select: none;
+		width: 100%;
+		background-color: #fff;
+		float: left;
+	}
+	header {
+		height: 60px;
+		position: fixed;
+		border-bottom: 1px solid silver;
+		padding: 0.5%;
+	}
+	header img {
+		width: 56px;
+		margin-right: 25px;
+		border-radius: 50%;
+		border: 3px solid silver;
+	}
+	header img:hover {
+		border: 3px solid cornflowerblue;
+		transition: all.6s;
+	}
+	header #logo {
+		max-height: 100px;
+		font-size: 2.5em;
+		font-weight: bold;
+		margin-left: 25px;
+		margin-top: 10px;
+		float: left;
+	}
+}
+
+/*Секции*/
+@media (orientation: landscape) { /* для альбомного вида */
+	#menuHrefs {
+		margin-top: 3.6%;
+		user-select: none;
+	}
+	#menu hr {
+		width: 500px;
+		max-width: 100%;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	#menuHrefs a {
+		padding: 5px;
+		border-radius: 5px;
+		margin-right: 5px;
+		color: #626262;
+	}
+	#menuHrefs a:hover{
+		background-color: darkturquoise;
+		color: snow;
+	}
+}
+@media (orientation: portrait) { /*Для портретного вида*/
+	#menuHrefs {
+		user-select: none;
+		margin-top: 15%;
+	}
+	#menu hr {
+		height: 3px;
+		background-color: silver;
+		border-radius: 100%;
+		width: 75%;
+		max-width: 100%;
+		margin-top: 25px;
+		margin-bottom: 10px;
+	}
+	#menuHrefs a {
+		font-size: 2.1em;
+		font-weight: normal;
+		font-family: Arial;
+		padding: 10px;
+		border-radius: 5px;
+		margin-right: 5px;
+		color: #003333;
+	}
+	#menuHrefs a:hover{
+		background-color: darkturquoise;
+		color: snow;
+	}
+}
+
+/*Футер*/
+@media (orientation: landscape) {
+	footer {
+		width: 96%;
+		border-top: 3px solid cornflowerblue;
+		padding: 2%;
+		font-size: 1em;
+    	bottom: 0;
+    	left: 0;
+	}
+	footer a {
+		color: tomato;
+		font-size: 1.3em;
+		padding: 1%;
+		margin: 11%;
+	}
+	footer a:hover {
+		background-color: black;
+		border-radius: 5px;
+		transition: all.6s;
+	}
+}
+@media (orientation: portrait) {
+	footer {
+		width: 94%;
+		padding: 3%;
+		font-size: 2em;
+		border-top: 3px solid cornflowerblue;
+		background-color: snow;
+		position: fixed;
+    	bottom: 0;
+    	left: 0;
+	}
+	footer a {
+		font-family: serif;
+		color: cornflowerblue;
+		font-size: 1em;
+		padding: 1%;
+		margin: 7.4%;
+	}
+	footer a:hover {
+		background-color: black;
+		border-radius: 10px;
+	}
+}
+
+/*----------------------------*/
+
+/* стили для странички о нас */
+@media (orientation:  landscape){
+	#about_us{
+		width: 50%;
+		margin-left: 10%;
+		float: left;
+		background-color: #fafafa;
+		border-radius: 5px;
+		border: 1px solid silver;
+		box-sizing: border-box;
+		padding: 1%;
+	}
+	#column_right{
+		width: 30%;
+		margin-left: 1%;
+		float: left;
+		background-color: #fafafa;
+		border-radius: 5px;
+		border: 1px solid silver;
+		box-sizing: border-box;
+		padding: 1%;
+	}
+}
+@media (orientation:  portrait){
+	@media (max-height:  2000px)
+	{#wrapper {min-height: 1164px;}}
+
+	@media (min-height:  2001px)
+	{#wrapper {min-height: 1516px;}}
+
+	@media (max-height:  1599px) and (min-width: 951px) and (min-height: 1001px)
+	{#wrapper {min-height: 750px;}}
+	#about_us{
+		font-size: 1em;
+		width: 90%;
+		margin-left: 5%;
+		border-radius: 10px;
+		border: 1px solid silver;
+		box-sizing: border-box;
+		padding: 5%;
+	}
+	#column_right{
+		width: 90%;
+		margin-top: 2%;
+		margin-left: 5%;
+		border-radius: 10px;
+		border: 1px solid silver;
+		box-sizing: border-box;
+		padding: 1%;
+	}
+}
+/* Главный вход */
+@media (orientation:  landscape){
+	#enter {
+		font-family: Gotic;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		position: fixed;
+		user-select: none;
+		text-align: center;
+	}
+	#enter #header {
+		margin-top: 5%;
+		font-size: 3em;
+		font-weight: bold;
+		color: black;
+	}
+	#enter #text {
+		margin-top: 4%;
+		font-size: 1.2em;
+		font-family: italic;
+		font-weight: 100;
+	}
+	#enter #or {
+		margin-top: 1.2%;
+		color: silver;
+		font-size: 1.2em;
+		font-weight: bold;
+		font-family: italic;
+	}
+	#enter #auth {margin-top: 5%;}
+	#enter #reg {margin-top: 2%;}
+	#enter a {
+		padding: 0.7%;
+		font-size: 1.2em;
+		background-color: black;
+		border: 1xp solid black;
+		border-radius: 5px;
+		border: 3px solid black;
+	}
+	#enter a:hover {
+		border-radius: 25px;
+		color: tomato;
+		transition: all.9s;
+	}
+	#fb {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+	}
+}
+@media (orientation:  portrait){
+	#enter {
+		font-family: Gotic;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		position: fixed;
+		user-select: none;
+		text-align: center;
+	}
+	#enter #header {
+		margin-top: 25%;
+		font-size: 6em;
+		font-weight: bold;
+		color: black;
+	}
+	#enter #text {
+		margin-top: 18%;
+		font-size: 3em;
+		font-family: italic;
+		font-weight: 100;
+	}
+	#enter #or {
+		margin-top: 12%;
+		font-size: 3em;
+		color: silver;
+		font-weight: bold;
+		font-family: italic;
+	}
+	#enter #auth {margin-top: 32%;}
+	#enter #reg {margin-top: 13%;}
+	#enter a {
+		padding: 4%;
+		font-size: 3em;
+		font-weight: bold;
+		background-color: black;
+		border-radius: 10px;
+		border: 2px solid black;
+		color: #8ce4a6;
+	}
+	#enter a:hover {
+		background-color: white;
+		border-radius: 100px;
+		border: 3px solid black;
+		color: black;
+	}
+}
+/* Стили для формочек */
+#form a{
+	text-decoration: none;
+	color: darkred;
+	float: right;
+}
+#form a:hover {
+	color: cornflowerblue;
+	transition: all.6s ease;
+}
+@media (orientation:  landscape){ 
+	/*для десктопа*/
+	#form {
+		width: 100%;
+		user-select: none;
+	}
+	#form h1 {
+		user-select: none;
+		text-align: center;
+		font-size: 4em;
+		color: black;
+		font-weight: bolder;
+		margin-top: 5%;
+		font-family: serif;
+	}
+	#form i {
+		color: cornflowerblue;
+		font-family: Times new roman , serif;
+	}
+	#form form {
+		font-family: serif;
+		margin-top: 5%;
+		width: 50%;
+		margin-left: 25%;
+	}
+	/**/
+	#form form input {
+		font-family: serif;
+		font-size: 0.7em;
+		width: 50%;
+		padding: 1.3%;
+		border: 1px solid silver;
+		border-radius: 5px;
+		margin-left: 23%;
+		margin-top: 7px;
+	}
+	#form form input:focus {
+		border: 1px solid black;
+	}
+	/**/
+	#form form textarea {
+		resize: none;
+		width: 52.5%;
+		clear: both;
+		border: 1px solid silver;
+		border-radius: 5px;
+		margin-top: 5px;
+		margin-left: 23%;
+	}
+	#form a {
+		font-size: 0.8em;
+	}
+	#form textarea:focus {border: 1px solid black;}
+	#form #send{
+		font-family: serif;
+		font-size: 1em;
+		width: 20%;
+		margin-left: 40%;
+		padding: 1%;
+		background-color: black;
+		border-radius: 5px;
+		margin-top: 10px;
+		color: white;
+		cursor: pointer;
+		transition: all.7s ease;
+	}
+	#form #send:hover {
+		background-color: #003333;
+		border-radius: 25px;
+		transition: all.6s;
+	}
+}
+@media (orientation:  portrait){ 
+	/* для мобилы */
+	#form {
+		user-select: none;
+	}
+	#form h1 {
+		font-family: serif;
+		text-align: center;
+		font-size: 7em;
+		color: black;
+		font-weight: bolder;
+		margin-top: 25%;
+	}
+	#form i {
+		color: cornflowerblue;
+	}
+	#form form{
+		width: 90%;
+		margin-top: 25%;
+		margin-left: 5%;
+	}
+	#form form input {
+		font-family: serif;
+		font-size: 1.9em;
+		width: 96%;
+		height: 80px;
+		border-radius: 5px;
+		border: 1px solid silver;
+		padding: 2%;
+		margin-bottom: 3%;
+	}
+	#form input:focus {border: 2px solid black;}
+	#form a {
+		font-family: serif;
+		font-size: 2em;
+		padding: 3%;
+	}
+	#form textarea {
+		font-size: 2em;
+		width: 96%;
+		padding: 2%;
+		height: 90px;
+		border-radius: 10px;
+		border: 1px solid silver;
+		margin-bottom: 3%;
+	}
+	#form textarea:focus {border: 2px solid #f58b8b;}
+	#form #send {
+		font-size: 2em;
+		font-weight: bold;
+		margin-left: 25%;
+		width: 50%;
+		height: 100px;
+		color: white;
+		font-family: serif;;
+		background-color: black;
+	}
+	#form #send:hover {background-color: #003333; transition: all.6s;}
+}
+
+/* Основные стили для подборки статей */
+@media (orientation: landscape) { /*Для десктопа*/
+	#wrapper {
+		padding-top: 3%;
+		float: left;
+		width: 100%;
+	}
+	#wrapper .articles {
+		padding-bottom: 1%;
+		float: left;
+		width: 90%;
+		margin-left: 8%;
+
+	}
+	#wrapper .articles article {
+		font-family: serif;
+		float: left;
+		border: 1px solid cornflowerblue;
+		box-sizing: border-box;
+		border-radius: 3%;
+		background-color: snow;
+	}
+	@media (min-width:  900px){
+		#wrapper .articles article {
+			width: 30%;
+			margin-right: 2%;
+			min-height: 300px;
+		}
+	}
+	@media (max-width:  899px) and (min-width:  700px){
+		#wrapper .articles article {
+			width: 45%;
+			margin-left: 20px;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	@media (max-width:  699px){
+		#wrapper .articles article {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	#wrapper .articles article img {
+		width: 100%; /*тут для изображения можно добавить height в пиксельях если понадобится*/
+		border-radius: 3% 3% 0px 0px;
+		border-bottom: 2px solid cornflowerblue;
+		margin-bottom: 1%;
+	}
+	#wrapper .articles article h2 {
+		width: 90%;
+		margin-left: 3%;
+		font-weight: normal;
+		font-size: 1.3em;
+		color: #4a4a4a;
+	}
+	#wrapper .articles article p {
+		font-size: 0.8em;
+		width: 90%;
+		margin-left: 3%;
+		text-indent: 1em;
+	}
+	#wrapper .articles article #author {
+		border-radius: 0;
+		border: none;
+		background-color: snow;
+		padding: 2%;
+		padding-top: 0;
+		font-family: concolas;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: silver;
+	}
+	#wrapper .articles article #author p::before {
+		content: "@";
+	}
+	#wrapper .articles article #author p:hover {
+		color: cornflowerblue;
+		transition: all.6s;
+	}
+	#wrapper .articles #post #but_del_post {
+		width: 40px;
+		margin-left: 85%;
+		border:  none;
+		border-radius: 50%;
+		margin-top: 1%;
+	}
+	#wrapper .articles article form img{
+		
+		border:  none;
+		border-radius: 50%;
+		background-color: snow;
+		user-select: none;
+	}
+	#newposts {
+		font-family: serif;
+		text-align:center;
+		color: silver;
+		font-weight: bold;
+		user-select: none;
+		padding: 2%;
+		padding-bottom: 0;
+	}
+	#newposts:hover{
+		color: cornflowerblue;
+		transition: all.6s;
+	}
+}
+@media (orientation: portrait) { /* Для телефонов */
+	#wrapper {
+		padding-top: 5%;
+		float: left;
+		width: 100%;
+	}
+	#wrapper .articles {
+		float: left;
+		width: 90%;
+		margin-left: 5%;
+	}
+	#wrapper .articles article {
+		font-family: serif;
+		user-select: none;
+		float: center;
+		border: 3px solid cornflowerblue;
+		box-sizing: border-box;
+		border-radius: 5%;
+		background-color: snow;
+		padding-bottom: 3%;
+		padding-top: 1%;
+		width: 100%;
+		margin-bottom: 2%;
+	}
+	#wrapper .articles article img {
+		width: 98%;
+		padding: 1%;
+		border-radius: 5%;
+		margin-bottom: 10px;
+	}
+	#wrapper .articles article h2 {
+		width: 90%;
+		margin-left: 5%;
+		font-weight: bold;
+		font-size: 1.8em;
+		color: #4a4a4a;
+		padding-bottom: 0.5em;
+	}
+	#wrapper .articles article p {
+		font-size: 1.3em;
+		width: 90%;
+		margin-left: 5%;
+		text-indent: 0.5em;
+	}
+	#wrapper .articles article #author p::before {
+		content: "@";
+	}
+	#wrapper .articles article #author p:hover {
+		color: cornflowerblue;
+		transition: all.6s;
+	}
+	#wrapper .articles #post #but_del_post {
+		width: 100px;
+		margin-left: 85%;
+		border:  none;
+		border-radius: 50%;
+		margin-top: 1%;
+	}
+	#wrapper .articles article #author {
+		border-radius: 0;
+		border: none;
+		width: 200px;
+		background-color: snow;
+		margin-top: 2%;
+		padding: 1%;
+		font-family: concolas;
+		font-size: 2em;
+		font-weight: bold;
+		color: silver;
+	}
+	#wrapper .articles article form img{
+		
+		border:  none;
+		border-radius: 50%;
+		background-color: snow;
+		user-select: none;
+	}
+	#newposts {
+		font-family: serif;
+		text-align:center;
+		color: silver;
+		font-weight: bold;
+		user-select: none;
+		font-size: 3em;
+		padding: 4%;
+	}
+	#newposts:hover{
+		color: cornflowerblue;
+		transition: all.6s;
+	}
+}
+
+/* profile style*/
+@media (orientation: portrait) {
+	.profile {
+		background-color: snow;
+		margin-top: 20%;
+		width: 90%;
+		float: left;
+		margin-left: 5%;
+		border: 1px solid darkturquoise;
+		border-radius: 50px;
+	}
+	.profile #pr-block {
+		float: left;
+		width: 100%;
+		border-bottom: 2px dashed darkturquoise;
+	}
+	.profile #pr-block-1 {
+		float: left;
+		margin-left: 5%;
+		width: 30%;
+	}
+	.profile #user_img {
+		margin-top: 10%;
+		pointer-events: none;
+		user-select: none;
+		border-radius: 200px;
+		border: 3px solid cornflowerblue;
+		width: 400px;
+	}
+	.profile #pr-block-2 {
+		float: left;
+		padding-top: 5%;
+		width: 24em;
+	}
+	.profile #user {
+		user-select: none;
+		font-family: serif;
+		font-size: 2em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.profile #pr-block-3 {
+		float: left;
+		padding: 5%;
+		width: 16em;
+	}
+	.profile #user_name::before{
+		content: "@";
+	}
+	.profile #user_name {
+		font-size: 2em;
+		color: silver;
+		font-family: consolas;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding-bottom: 5%;
+	}
+	.profile #change {
+		float: right;
+		margin-top: 25%;
+		width: 10%;
+	}
+	.profile #change img {
+		user-select: none;
+		width: 100px;
+		border-radius: 50px;
+	}
+	.profile #pr-block-4 {
+		float: left;
+		padding: 1%;
+		padding-bottom: 5%;
+		width: 100%;
+	}
+	.profile #pr-block-4 #bio {
+		color: silver;
+		padding: 3%;
+		font-weight: bold;
+		font-family: serif;
+		font-size: 2.5em;
+		pointer-events: none;
+		user-select: none;
+	}
+	.profile #pr-block-4 #about_person {
+		user-select: none;
+		margin-left: 3%;
+		font-family: serif;
+		font-family: italic;
+		font-size: 2em;
+	}
+	#posts_title {
+		user-select: none;
+		text-align: center;
+		font-family: serif;
+		color: silver;
+		font-weight: bold;
+		padding-top: 75%;
+	}
+	#posts_title::after{
+		content: ":";
+	}
+
+}
+@media (orientation: landscape) {
+	.profile {
+		background-color: snow;
+		margin-top: 10%;
+		width: 80%;
+		float: left;
+		margin-left: 10%;
+		border: 2px solid darkturquoise;
+		border-radius: 25px;
+	}
+	.profile #pr-block {
+		width: 49%;
+		float: left;
+		border-right:1px dashed darkturquoise;
+	}
+	.profile #pr-block-1 {
+		margin-top: 5%;
+		margin-left: 5%;
+		width: 200px;
+	}
+	.profile #user_img {
+		pointer-events: none;
+		user-select: none;
+		border-radius: 80px;
+		width: 160px;
+	}
+	.profile #change {
+		float: right;
+		width: 20%;
+	}
+	.profile #change img {
+		user-select: none;
+		width: 50px;
+		border-radius: 50px;
+	}
+	.profile #pr-block-2 {
+		margin-left: 1em;
+		width: 16em;
+	}
+	.profile #user {
+		user-select: none;
+		font-family: serif;
+		font-size: 1em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.profile #pr-block-3 {
+		margin-left: 1em;
+		width: 16em;
+	}
+	.profile #user_name::before{
+		content: "@";
+	}
+	.profile #user_name {
+		font-size: 1em;
+		color: silver;
+		font-family: consolas;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding-bottom: 5%;
+	}
+	.profile #pr-block-4 {
+		padding: 1%;		
+		float: right;
+		width: 48%;
+	}
+	.profile #pr-block-4 #bio {
+		color: silver; 
+		padding: 2%;
+		font-weight: bold;
+		font-family: serif;
+		font-size: 1.6em;
+		pointer-events: none;
+		user-select: none;
+	}
+	.profile #pr-block-4 #about_person {
+		user-select: none;
+		margin-left: 1%;
+		font-family: serif;
+		font-size: 1em;
+	}
+	#posts_title {
+		user-select: none;
+		text-align: center;
+		font-family: serif;
+		color: silver;
+		font-weight: bold;
+		padding-top: 35%;
+	}
+	#posts_title::after{
+		content: ":";
+	}
+
+}
+
+/* поиск по сайту */
+@media (orientation:  landscape){
+	#search_container {
+		padding-top: 1%;
+		width: 100%;
+		height: 25%;
+	}
+	#search {
+		width: 25%;
+		height: 40px;
+		border-radius: 25px;
+		text-indent: 1em;
+		font-family: serif;
+		border: 2px solid cornflowerblue;
+		margin-left: 35%;
+	}
+	#searchbutton {
+		float: right;
+		width: 4%;
+		height: 36px;
+		margin-right: 36%;
+		background-color: none;
+		border-radius: 25px;
+		border: none;
+	}
+	#searchbutton img{
+		width: 80%;
+		height: 100%;
+		border-radius: 25px;
+		border:  2px solid cornflowerblue;
+	}
+	#searchbutton img:hover{
+		border: 2px solid darkturquoise;
+		transition: all.6s;
+	}
+	#search:focus {
+		border-color: darkturquoise;
+		transition: all.6s;
+	}
+}
+@media (orientation:  portrait){ /* для мобилы */
+	#search_container {
+		padding-top: 5%;
+		width: 100%;
+		height: 20%;
+	}
+	#search {
+		text-indent: 1em;
+		font-size: 2.4em;
+		font-family: serif;
+		font-weight: bold;
+		margin-left: 10%;
+		width: 70%;
+		height: 90px;
+		border: 3px solid cornflowerblue;
+		border-right: none;
+		border-left: 5px solid white;
+	}
+	#search:focus{
+		border: 3px solid darkturquoise;
+		border-right: none;
+		transition: all.6s;
+	}
+	#searchbutton {
+		float: right;
+		margin-right: 10%;
+		font-size: 2em;
+		width: 10%;
+		height: 92px;
+		border: none;
+		border-radius: 0px 40px 40px 0px;
+	}
+	#searchbutton img {
+		user-select: none;
+		width: 100%;
+		height: 90%;
+		border: 3px solid cornflowerblue;
+		border-radius: 0px 40px 40px 0px;
+	}
+	#searchbutton img:hover {
+		border: 3px solid darkturquoise;
+	}
+}
+
+/* profile settings */
+@media (orientation: landscape) {
+	#setprofile {
+		padding-top: 10%;
+		width: 90%;
+		margin-left: 5%;
+	}
+	#setprofile #img {
+		width: 10%;
+		border-radius: 10%;
+	}
+	#setprofile #edit {
+		float: right;
+		width: 70%;
+	}
+	#setprofile label {
+		user-select: none;
+		font-weight: bold;
+		color: darkturquoise;
+		font-family: serif;
+	}
+	#setprofile label:active {
+		color: cornflowerblue;
+	}
+	#setprofile #uploadimg {
+		pointer-events: none;
+		width: 0px;
+	}
+	#setprofile #save {
+		padding: 1%;
+		border: 1px solid cornflowerblue;
+		background-color: snow;
+		border-radius: 10px;
+		font-weight: bold;
+		color: cornflowerblue;
+	}
+	#setprofile #save:hover {
+		background-color: darkturquoise;
+		color: snow;
+		border-radius: 25px;
+		transition: all.6s;
+	}
+	form #exit{
+		background-color: white;
+		float: right;
+		padding: 10px;
+		margin-right: 25px;
+		width: 10%;
+		font-weight: bolder;
+		border: 1px solid black;
+		cursor: pointer;
+	}
+	form #exit:hover {
+		border: 1px solid red;
+		color: red;
+		transition: all.6s;
+	}
+}
+@media (orientation: portrait) {
+	#setprofile {
+		padding-top: 25%;
+		width: 90%;
+		margin-left: 5%;
+	}
+	#setprofile #img {
+		width: 40%;
+		border-radius: 10%;
+	}
+	#setprofile #edit {
+		padding: 1%;
+		float: right;
+		width: 55%;
+	}
+	#setprofile label {
+		user-select: none;
+		font-size: 2em;
+		font-weight: bold;
+		color: darkturquoise;
+		font-family: serif;
+	}
+	#setprofile label:active {
+		color: cornflowerblue;
+	}
+	#setprofile #uploadimg {
+		pointer-events: none;
+		width: 0px;
+	}
+	#setprofile #save {
+		margin-top: 5%;
+		padding: 5%;
+		border: 2px solid cornflowerblue;
+		background-color: snow;
+		border-radius: 25px;
+		font-size: 1.6em;
+		font-family: consolas;
+		font-weight: bold;
+		color: cornflowerblue;
+	}
+	#setprofile #save:hover {
+		background-color: darkturquoise;
+		color: snow;
+		border-radius: 50px;
+		transition: all.6s;
+	}
+	form #exit{
+		background-color: snow;
+		float: right;
+		padding: 5%;
+		margin-right: 5%;
+		width: 40%;
+		font-size: 2em;
+		font-weight: bolder;
+		border: 1px solid black;
+		cursor: pointer;
+	}
+	form #exit:hover {
+		border: 1px solid red;
+		color: red;
+		transition: all.6s;
+	}
+}
+
+/* странца для создания статьей */
+@media(orientation:  landscape) {
+	#create_article_container {
+		background-color: darkturquoise;
+		margin-top: 3%;
+		margin-left: 20%;
+		width: 60%;
+		border: 1px solid cornflowerblue;
+		border-radius: 25px;
+		margin-bottom: 25%;
+	}
+	#form_create_article input {
+		margin-top: 15%;
+		float: left;
+		width: 30%;
+		margin-left: 0%;
+		padding: 1%;
+		border: 3px solid silver;
+		border-radius: 5px;
+		background-color: snow;
+	}
+	#form_create_article textarea {
+		margin-top: 3%;
+		margin-left: 20%;
+		margin-right: 30%;
+		min-width: 50%;
+		min-height: 16%;
+		max-width: 75%;
+		width: 50%;
+		padding: 1%;
+		border: 3px solid silver;
+		border-radius: 5px;
+		background-color: snow;
+	}
+	#form_create_article #file {
+		pointer-events: none;
+		user-select: none;
+		font-size: 0em;
+		border: none;
+		background-color: darkturquoise;
+		float: right;
+		width: 0px;
+		height: 0px;
+		opacity: 0;
+	}
+	#form_create_article #inputfile img{
+		float: left;
+		width: 20%;
+		border-radius: 20px;
+	}
+	#form_create_article .field:focus {
+		border: 3px solid #006666;
+		transition: all.6s;
+	}
+	#form_create_article button {
+		margin-top: 3%;
+		margin-left: 75%;
+		width: 20%;
+		margin-bottom: 3%;
+		padding: 1%;
+		font-size: 1em;
+		background-color: #006666;
+		color: white;
+		border: 2px solid cornflowerblue;
+		border-radius: 5px;
+	}
+	#form_create_article button:hover {
+		border-radius: 25px;
+		color: #8ce4a6;
+		border: 2px solid #8ce4a6;
+		transition: all.6s;
+	}
+}
+@media(orientation:  portrait) {
+	#create_article_container {
+		background-color: darkturquoise;
+		margin-top: 25%;
+		margin-left: 5%;
+		width: 90%;
+		border: 1px solid cornflowerblue;
+		border-radius: 25px;
+		margin-bottom: 25%;
+	}
+	#form_create_article #file {
+		pointer-events: none;
+		user-select: none;
+		font-size: 0em;
+		border: none;
+		background-color: darkturquoise;
+		float: right;
+		width: 0px;
+		height: 0px;
+		opacity: 0;
+	}
+	#form_create_article #inputfile img{
+		float: right;
+		width: 30%;
+		border-radius: 25px;
+	}
+	#form_create_article input {
+		margin-top: 25%;
+		margin-left: 5%;
+		float: left;
+		width: 50%;
+		padding: 2%;
+		border: 3px solid silver;
+		border-radius: 25px;
+		font-size: 2.5em;
+		background-color: snow;
+	}
+	#form_create_article textarea {
+		margin-top: 5%;
+		margin-left: 5%;
+		width: 83%;
+		padding: 3%;
+		padding-bottom: 25%;
+		border: 3px solid silver;
+		border-radius: 25px;
+		font-size: 2.5em;
+		background-color: snow;
+	}
+	#form_create_article .field:focus {
+		border: 3px solid #006666;
+		transition: all.6s;
+	}
+	#form_create_article button {
+		margin-top: 5%;
+		margin-left: 60%;
+		width: 30%;
+		margin-bottom: 3%;
+		padding: 2%;
+		font-size: 2em;
+		background-color: #006666;
+		color: white;
+		border: 2px solid cornflowerblue;
+		border-radius: 25px;
+	}
+	#form_create_article button:hover {
+		border-radius: 40px;
+		color: #8ce4a6;
+		border: 2px solid #8ce4a6;
+		transition: all.6s;
+	}
+}
