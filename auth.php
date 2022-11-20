@@ -1,13 +1,12 @@
 <?php
-	if ($_COOKIE['user'] != "") header('Location: /');
+	if (isset($_COOKIE['user'])) header('Location: /');
 	$title = "Вход";
 	require_once "contents/head.php";
  ?>
-<body>
 	<div class="clear" ><br /></div>
 	<div id="form">
 		<h1>Plus<i>Party</i></h1>
-		<form action="/assemblyfiles/treatment_auth.php" method="post">
+		<form action="/server/auth.php" method="post">
 			<input type="text" id="login" name="login" placeholder="Логин">
 
 			<a href="/reg.php"> У вас нету аккаунта?</a>

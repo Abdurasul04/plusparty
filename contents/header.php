@@ -1,5 +1,5 @@
 <?php 
-	if ($_COOKIE['user'] == "") header('Location: /enter.php');
+	if ($_COOKIE['name'] == "") header('Location: /enter.php');
  ?>
 <!DOCTYPE html>
 <html>
@@ -27,14 +27,14 @@
 
 		<span class="right">
 		<?php
-			$login = $_COOKIE['user_name'];
-			require "assemblyfiles/config.php";
-			$result = $mysql->query("SELECT * FROM users WHERE user_name = '$login'");
+			$name = $_COOKIE['name'];
+			require "server/connect.php";
+			$result = $mysql->query("SELECT * FROM users WHERE `name` = '$name'");
 			$user = $result->fetch_assoc();
 
-			if ($user['profile_photo'] == '') echo '<a href="edit.php"><img src="img/user_photo.jpg" alt=""></a>';
+			if (empty($user['photo'])) echo '<a href="edit.php"><img src="img/user_photo.jpg" alt=""></a>';
 			else {
-				$show_img = base64_encode($user['profile_photo']);
+				$show_img = base64_encode($user['photo']);
 				echo '<a href="edit.php"><img src="data:image/jpeg;base64,';
 				echo $show_img;
 				echo'"alt=""></a>';

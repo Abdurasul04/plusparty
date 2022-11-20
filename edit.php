@@ -4,14 +4,14 @@
 ?>
 
 <?php
-	$login = $_COOKIE['user_name'];
-	require "assemblyfiles/config.php";
-	$result = $mysql->query("SELECT * FROM users WHERE user_name = '$login'");
+	$name = $_COOKIE['name'];
+	require "server/connect.php";
+	$result = $mysql->query("SELECT * FROM users WHERE name = '$name'");
 	$user = $result->fetch_assoc();
-	if ($user['profile_photo'] == '') echo '<div id="setprofile"><img id="img" src="img/user_photo.jpg" alt="">';
+	if ($user['photo'] == '') echo '<div id="setprofile"><img id="img" src="img/user_photo.jpg" alt="">';
 	else 
 	{
-		$show_img = base64_encode($user['profile_photo']);
+		$show_img = base64_encode($user['photo']);
 		echo '<div id="setprofile">';
 		echo '<img id="img" src="data:image/jpeg;base64,';
 		echo $show_img;
@@ -20,19 +20,18 @@
 	$mysql->close(); 
 ?>
 
-	<form id="edit" method="post" enctype="multipart/form-data" action="/assemblyfiles/insert_profile_photo.php">
-		<label for="uploadimg">Изменить фото профилья</label>
-		<input id="uploadimg" type="file" name="profile_photo">
+	<form id="edit" method="post" enctype="multipart/form-data" action="/server/insert_profile_photo.php">
+		<label for="uploading">Изменить фото профилья</label>
+		<input id="uploading" type="file" name="photo">
 		<input id="save" type="submit" name="upload" value="Сохранить">
 	</form>
 
 	<div id="exit">
-		<form action="/assemblyfiles/treatment_exit.php" method="post">
+		<form action="/server/logOut.php" method="post">
 			<input onclick="confirmation()" type="submit" value="Выйти >" id="exit" name="exit">
 		</form>
 	</div>
 </div>
-
 
 <?php
 	require_once "contents/footer.php";

@@ -1,4 +1,5 @@
-<?php 
+<?php
+	if (isset($_COOKIE['name'])) header('Location: /');
 	$title = "PlusParty";
 	require_once "contents/head.php";
  ?>

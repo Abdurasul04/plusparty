@@ -6,7 +6,7 @@
 
  <div id="create_article_container">
  	<div id="form_create_article">
- 		<form method="post" enctype="multipart/form-data" action="assemblyfiles/publish_article.php">
+ 		<form method="post" enctype="multipart/form-data" action="server/publish_article.php">
             <label id="inputfile" for="file"><img src="img/addimage.png"></label>
             <input id="file" type="file" name="image">
  			<input autocomplete="off" class="field" type="text" name="title" placeholder="Название">

@@ -120,7 +120,6 @@ img {
 		float: left;
 	}
 }
-
 /*Секции*/
 @media (orientation: landscape) { /* для альбомного вида */
 	#menuHrefs {
@@ -592,7 +591,7 @@ img {
 		color: cornflowerblue;
 		transition: all.6s;
 	}
-	#wrapper .articles #post #but_del_post {
+	#wrapper .articles .post #but_del_post {
 		width: 40px;
 		margin-left: 85%;
 		border:  none;
@@ -671,7 +670,7 @@ img {
 		color: cornflowerblue;
 		transition: all.6s;
 	}
-	#wrapper .articles #post #but_del_post {
+	#wrapper .articles .post #but_del_post {
 		width: 100px;
 		margin-left: 85%;
 		border:  none;
@@ -711,7 +710,9 @@ img {
 		transition: all.6s;
 	}
 }
-
+.post img{
+	width: 200px;
+}
 /* profile style*/
 @media (orientation: portrait) {
 	.profile {
@@ -796,7 +797,7 @@ img {
 		pointer-events: none;
 		user-select: none;
 	}
-	.profile #pr-block-4 #about_person {
+	.profile #pr-block-4 #bio {
 		user-select: none;
 		margin-left: 3%;
 		font-family: serif;
@@ -893,7 +894,7 @@ img {
 		pointer-events: none;
 		user-select: none;
 	}
-	.profile #pr-block-4 #about_person {
+	.profile #pr-block-4 #bio {
 		user-select: none;
 		margin-left: 1%;
 		font-family: serif;
@@ -1262,4 +1263,17 @@ img {
 		border: 2px solid #8ce4a6;
 		transition: all.6s;
 	}
+}
+
+
+#delete_post {
+	width: 30px;
+}
+#delete_post button {
+	border-radius: 50%;
+	border-color: inherit;
+}
+#delete_post :hover {
+	transition: all 5s;
+	width: 50px;
 }

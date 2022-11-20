@@ -14,11 +14,11 @@
 </div>
 
 <?php 
-	if ($_GET['user'] != '') require_once "assemblyfiles/treatment_search.php";
+	if (isset($_GET['user'])) require_once "server/search.php";
 	else if (mb_substr($_SERVER['REQUEST_URI'], 12, -1) != '') // обработка для ссылок с главной страницы
 	{
 		$_GET['user']= mb_substr($_SERVER['REQUEST_URI'], 12, -1);
-		require "assemblyfiles/treatment_search.php";
+		require "server/search.php";
 	}
 	else '<div style="margin-bottom: 25%;" class="clear" ><br /></div>';
 
